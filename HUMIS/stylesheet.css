@@ -9,9 +9,15 @@ div#parent { /* Declaration or "selector" */
 }
 
 div#parent section {
-    /*height: 100px;*/
-    margin: 10px;
     border: 1px solid black;
+}
+
+section.sub-head {
+    /*background: url('files/histHomepic.jpg') top left no-repeat;*/
+    background-image: url('files/histHomepic.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50px;
 }
 
 section.main-content-area { /* declaration for a section tag whose class is "main-content-area" */
@@ -48,7 +54,7 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
     }
 
     section.brown-box {
-        background-color: brown;
+        background-color: #BEC3A1;
         padding: 20px;
         border-radius: 10px;
         min-height: 400px;
@@ -70,7 +76,6 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             }
 
             nav {
-            /*.nav {*/
                 min-height: 60%;
             }
         }
@@ -79,4 +84,12 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             width: 60%;
         }
     }
+}
+
+section.footer {
+    background-color: #60663E;
+    text-align: center;
+    color: white;
+    font-size: 11px;
+    padding: 8px 0;
 }
