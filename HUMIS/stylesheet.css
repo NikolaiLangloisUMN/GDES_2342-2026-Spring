@@ -82,6 +82,33 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
 
         .right-side {
             width: 60%;
+            background-color: white;
+            padding: 10px;
+
+            img {
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+
+            div.more {
+                /*text-align: right;*/
+                display: flex;
+                justify-content: flex-end;
+
+                a {
+                    color: red;
+                    text-decoration: none;
+                    font-size: 9px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
         }
     }
 }
@@ -92,4 +119,12 @@ section.footer {
     color: white;
     font-size: 11px;
     padding: 8px 0;
+}
+
+
+h4 {
+    color: red;
+    border-bottom: 2px dashed red;
+    font-weight: unset;
+    margin: 0 0 5px 0;
 }
