@@ -78,6 +78,12 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
             nav {
                 min-height: 60%;
             }
+
+            .links {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+            }
         }
 
         .right-side {
