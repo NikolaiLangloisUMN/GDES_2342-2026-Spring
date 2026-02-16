@@ -59,31 +59,27 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
         border-radius: 10px;
         min-height: 400px;
         display: flex;
-
-        > * {
-            border: 1px solid black;
-            margin: 10px;
-        }
+        justify-content: space-between;
 
         .left-side {
-            width: 40%;
+            width: 30%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
-            > * {
-                border: 3px solid black;
-            }
-
             nav {
-                /*min-height: 60%;*/
                 a {
+                    color: black;
                     display: block;
                     text-decoration: none;
+                    border-bottom: 2px solid #60663e;
+                    padding: 8px 0 8px 12px;
+                    text-transform: uppercase;
+                    font-size: 11px;
 
                     &:hover {
                         color: white;
-                        background-color: black;
+                        background-color: #60663e;
                     }
                 }
             }
@@ -96,11 +92,12 @@ section.main-content-area { /* declaration for a section tag whose class is "mai
         }
 
         .right-side {
-            width: 60%;
+            width: 62%;
             background-color: white;
             padding: 10px;
 
             img {
+                width: 100%;
                 margin-bottom: 5px;
             }
 
