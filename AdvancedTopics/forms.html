@@ -3,8 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <title>Forms practice</title>
+    <style>
+        body {
+            form {
+                display: flex;
+                border: 10px solid black;
+                flex-direction: column;
+                gap: 1rem;
+
+                input {
+                    /*border: 1px dashed black;*/
+                    /*margin-bottom: 1rem;*/
+                }
+
+                div.choices {
+                    display: flex;
+                    gap: 1rem;
+
+                    label {
+                        border: 1px solid black;
+                    }
+                }
+
+                input.button {
+                    border: 1px solid red;
+                }
+            }
+        }
+    </style>
 </head>
 <body>
-  <p>My forms stuff will go here</p>
+<p>My forms stuff will go here</p>
+
+<form action="http://zoho.com/send-my-email" method="get">
+    <p>
+        <label for="firstName">We'd like to know your first name:</label>
+        <input type="text" id="firstName" name="firstname" placeholder="First name" required>
+    </p>
+
+    <input type="text" name="lastname" placeholder="Last name" required>
+    <input type="email" name="email" placeholder="Enter your email here" required>
+    <input type="number" name="age" placeholder="Enter your age here" max="10" required>
+
+    <!-- radio button example here -->
+    <div class="choices">
+        <label for="email">
+            <input type="radio" id="email" name="contactMethod" value="email">Email
+        </label>
+
+        <label for="phone">
+            <input type="radio" id="phone" name="contactMethod" value="sms">SMS
+        </label>
+    </div>
+
+    <!-- checkbox button example here -->
+    <div class="choices">
+        Symptoms:
+        <label><input type="checkbox" name="symptoms" value="groggy">Groggy</label>
+        <label><input type="checkbox" name="symptoms" value="sleepy">Sleepy</label>
+        <label><input type="checkbox" name="symptoms" value="anxious">Anxious</label>
+        <label><input type="checkbox" name="symptoms" value="optimistic">Optimistic</label>
+    </div>
+
+    <input type="submit" value="Submit" class="button">
+</form>
 </body>
 </html>
