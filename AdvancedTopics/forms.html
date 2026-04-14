@@ -32,10 +32,11 @@
         }
     </style>
 </head>
-<body>
-<p>My forms stuff will go here</p>
 
-<form action="http://zoho.com/send-my-email" method="get">
+<body>
+<h1>My forms stuff will go here</h1>
+
+<form method="get">
     <p>
         <label for="firstName">We'd like to know your first name:</label>
         <input type="text" id="firstName" name="firstname" placeholder="First name" required>
@@ -67,5 +68,40 @@
 
     <input type="submit" value="Submit" class="button">
 </form>
+
+<h2>Submitted Payload</h2>
+<div class="results">
+    <pre id="output">(nothing submitted yet)</pre>
+    <pre id="params">(no params yet)</pre>
+</div>
 </body>
+
+<script>
+    const form = document.querySelector("form");
+    const output = document.getElementById("output");
+    const params = document.getElementById("params");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const urlParams = new URLSearchParams(formData);
+
+        const data = {};
+
+        for (let [key, value] of formData.entries()) {
+            if (data[key]) {
+                if (!Array.isArray(data[key])) {
+                    data[key] = [data[key]];
+                }
+                data[key].push(value);
+            } else {
+                data[key] = value;
+            }
+        }
+
+        output.textContent = JSON.stringify(data, null, 2);
+        params.textContent = urlParams.toString();
+    });
+</script>
 </html>
