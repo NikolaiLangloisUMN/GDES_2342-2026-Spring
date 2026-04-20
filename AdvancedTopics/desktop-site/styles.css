@@ -1,0 +1,108 @@
+section.container {
+    --primaryColor: blue;
+
+    max-width: 800px;
+    border: 3px solid var(--primaryColor);
+    min-height: 600px;
+    margin: 0 auto; /* center this section horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    > * { /* Applies to EVERY CHILD (direct descendant) of section.container */
+        border: 1px dashed green;
+
+        h1 {
+            /*color: red;*/
+            color: var(--primaryColor);
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        gap: 1rem;
+
+        a {
+            color: red;
+            text-transform: uppercase;
+            padding: 10px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: red;
+                color: white;
+            }
+
+            &.current-page {
+                background-color: red;
+                color: white;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    section.content {
+        form {
+            div.columns {
+                display: flex;
+
+                div { /* each column inside the form */
+                    border: 1px solid black;
+                    /*min-height: 200px;*/
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    gap: 10px;
+
+                    div.inputBlock {
+                        background-color: lightgray;
+                        padding: 10px;
+                        border-radius: 10px;
+                        width: 93%;
+
+                        &:hover {
+                            background-color: darkgray;
+
+                            input, select {
+                                background-color: black;
+                            }
+                        }
+
+                        input, select {
+                            padding: 10px;
+                            /*font-family: Arial, Helvetica, sans-serif;*/
+                            color: red;
+                        }
+
+                        div.checkboxes {
+                            width: 100%;
+                            padding: unset;
+                            border: 10px solid black;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            div.checkbox {
+                                display: flex;
+                                width: 20%;
+
+                                > * {
+                                    border: 10px dotted blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.submit-button {
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
