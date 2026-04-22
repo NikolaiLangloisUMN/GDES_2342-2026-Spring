@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedded Video exercise</title>
+
+    <style>
+        video {
+            width: 100%;
+        }
+
+        div.controls {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+<video id="myVideo">
+    <source src="1416529-hd_1280_720_30fps.mp4" type="video/mp4">
+</video>
+
+<div class="controls">
+    <button onclick="playVideo()">Play the video</button>
+
+    <a href="#" onclick="pauseVideo()">Pause video</a>
+</div>
+
+
+<h2>Here's an example of a YouTube video embedded:</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pcfvn8PvLJ0?si=HRv1wzgCiNuS9Eta"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+
+<script>
+    const myVideo = document.getElementById('myVideo');
+
+    function playVideo() {
+        myVideo.play();
+    }
+
+    function pauseVideo() {
+        myVideo.pause();
+    }
+</script>
+</html>

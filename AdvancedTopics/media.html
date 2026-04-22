@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Working with Media</title>
+</head>
+<body>
+
+<h1>Sample "embedded" video using <code>video</code> tag:</h1>
+<video controls autoplay muted loop id="myVideo">
+    <source src="1416529-hd_1280_720_30fps.mp4" type="video/mp4">
+</video>
+
+<button id="playVideo" onclick="playVideo()">Play the video</button>
+<button id="pauseVideo" onclick="pauseVideo()">Pause the video</button>
+</body>
+
+<script>
+    var video = document.getElementById("myVideo");
+
+    function playVideo() {
+        video.play();
+    }
+
+    function pauseVideo() {
+        video.pause();
+    }
+</script>
+</html>
