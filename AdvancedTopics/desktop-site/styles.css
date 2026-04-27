@@ -80,6 +80,19 @@ section.container {
                     width: 100%;
                 }
 
+                svg {
+                    border: 1px solid black;
+                    width: 100%;
+                }
+
+                .red {
+                    color: red;
+
+                    &:hover {
+                        color: yellow;
+                    }
+                }
+
                 div.inputBlock {
                     background-color: lightgray;
                     padding: 10px;
