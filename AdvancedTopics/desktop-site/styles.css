@@ -1,6 +1,22 @@
+@font-face {
+    font-family: 'Fedora-regular';
+    src: url('fonts/Fedora.ttf');
+}
+
+@font-face {
+    font-family: 'Fedora-outline';
+    src: url('fonts/FedoraOutline.ttf');
+}
+
+@font-face {
+    font-family: 'Fedora-shadow';
+    src: url('fonts/FedoraShadow.ttf');
+}
+
 section.container {
     --primaryColor: blue;
 
+    font-family: Arial, Helvetica, sans-serif;
     max-width: 800px;
     border: 3px solid var(--primaryColor);
     min-height: 600px;
@@ -14,7 +30,9 @@ section.container {
 
         h1 {
             /*color: red;*/
+            font-family: 'Fedora-regular', sans-serif;
             color: var(--primaryColor);
+            text-align: center;
         }
     }
 

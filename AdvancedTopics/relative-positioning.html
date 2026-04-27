@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Relative Positioning</title>
+
+    <style>
+
+        div.container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+
+            p {
+                z-index: 100;
+            }
+
+            .black-box {
+                height: 200px;
+                background: black;
+                position: relative;
+
+                .circle {
+                    z-index: 1;
+                    border-radius: 50%;
+                    background-color: red;
+                    height: 100px;
+                    width: 100px;
+                    position: absolute;
+                    left: -30px;
+                    top: -30px;
+                    /*right: 0;*/
+                    /*bottom: 0;*/
+                }
+            }
+
+            footer {
+                background-color: yellow;
+                height: 200px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <p>Annika check this out!</p>
+
+    <div class="black-box">
+        <div class="circle"></div>
+    </div>
+
+    <footer>
+        <p>footer stuff</p>
+    </footer>
+</div>
+</body>
+</html>
